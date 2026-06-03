@@ -9,7 +9,7 @@ const Waline = walineModule.Waline || walineModule.default || walineModule;
 // 3. 安全检查：如果是函数就正常运行，如果不是，拦截报错不让系统崩溃
 if (typeof Waline === 'function') {
   module.exports = Waline({
-    // 数据库地址会自动读取 Vercel 里的 MONGO_URL 环境变量
+    // 数据库地址会自动读取 Vercel 里的 MONGO_URL 环境变
   });
 } else {
   module.exports = (req, res) => {
